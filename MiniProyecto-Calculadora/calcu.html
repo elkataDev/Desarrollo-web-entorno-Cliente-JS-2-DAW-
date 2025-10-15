@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #2b2b2b;
+        color: white;
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .calculator {
+        background: #1f1f1f;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        width: 320px;
+      }
+
+      .display {
+        background: black;
+        color: #0f0;
+        font-size: 2.5em;
+        padding: 20px;
+        text-align: right;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        overflow-x: auto;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      button {
+        padding: 20px;
+        font-size: 1.5em;
+        border: none;
+        border-radius: 10px;
+        background: #333;
+        color: white;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+
+      button:hover {
+        background: #555;
+      }
+
+      .operator {
+        background: #ff9500;
+        color: black;
+      }
+
+      .equal {
+        grid-column: span 2;
+        background: #0a84ff;
+      }
+
+      .clear {
+        background: #ff3b30;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display" id="pantalla">0</div>
+      <div class="buttons">
+        <button class="clear" id="reset">C</button>
+        <button class="operacion">%</button>
+        <button class="operacion">/</button>
+        <button class="operacion">*</button>
+
+        <button class="numero">7</button>
+        <button class="numero">8</button>
+        <button class="numero">9</button>
+        <button class="operacion">-</button>
+
+        <button class="numero">4</button>
+        <button class="numero">5</button>
+        <button class="numero">6</button>
+        <button class="operacion">+</button>
+
+        <button class="numero">1</button>
+        <button class="numero">2</button>
+        <button class="numero">3</button>
+        <button class="equal">=</button>
+
+        <button class="numero">0</button>
+        <button class="numero punto">.</button>
+      </div>
+    </div>
+    <script src="cal.js"></script>
+  </body>
+</html>
